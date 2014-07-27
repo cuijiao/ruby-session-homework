@@ -1,5 +1,6 @@
 require 'rspec/core/rake_task'
 require_relative "app/fizzbuzz" 
+require_relative "app/blackjack" 
 
 namespace :cuijiao do
     task :introduce do
@@ -16,6 +17,14 @@ end
 namespace :fizzbuzz do
     desc "fizzbuzz task"
     task :fizzbuzz, [:number] do |task, args|
-       fizzbuzz args[:number]
+       p fizzbuzz args[:number]
+    end
+end
+
+namespace :blackjack do
+    desc "blackjack task"
+    task :blackjack, [:array] do |task, args|
+       args.with_defaults(:array => ["5","4","3","2","A","K"])
+       p scoreHand args[:array]
     end
 end
