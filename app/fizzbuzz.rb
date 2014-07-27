@@ -1,14 +1,14 @@
 def fizzbuzz number
 	number=number.to_i
 	if number <= 0 
-		p "number need to be greater than zero"
+		return "number need to be greater than zero"
 	elsif number %15 ==0
-		p "fizzbuzz"
+		return "fizzbuzz"
 	elsif number % 5 == 0
-		p "buzz"
+		return "buzz"
 	elsif number %3 ==0
-		p "fizz"
+		return "fizz"
 	else
-		p "error number"	
+		return "error number"	
 	end
 end
