@@ -20,4 +20,6 @@ class HelloRack
 end
 
 #source code for Rack::Handler::WEBrick ---> https://github.com/rack/rack/blob/master/lib/rack/handler/webrick.rb
-Rack::Handler::WEBrick.run(HelloRack.new, :Port => 3000)
+#Rack::Handler::WEBrick.run(HelloRack.new, :Port => 3000)
+
+Rack::Handler::CGI.run(HelloRack.new, :Port => 3000)
